@@ -13,6 +13,7 @@ class EmailParser
 
   def initialize(emails)
     list = emails.split(",")
+    binding.pry
     list.each {|em| @@emailList << em if !@@emailList.include?(em)}
     @@emailList
   end
