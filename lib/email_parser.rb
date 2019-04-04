@@ -16,7 +16,7 @@ class EmailParser
     stripped_list = list.map {|string| string.strip}
     # binding.pry
     # list.each {|em| @@emailList << em if !@@emailList.include?(em)}
-    @@emailList << stripped_list.each
+    stripped_list.each {|stripped| @@emailList << stripped}
     puts @@emailList
   end
 
