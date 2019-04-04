@@ -13,8 +13,8 @@ class EmailParser
 
   def initialize(emails)
     list = emails.split(",")
-    list.map {|string| string.strip}
-    puts list
+    stripped_list = list.map {|string| string.strip}
+    puts stripped_list
     binding.pry
     list.each {|em| @@emailList << em if !@@emailList.include?(em)}
     @@emailList
