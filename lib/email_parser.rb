@@ -17,7 +17,7 @@ class EmailParser
     puts stripped_list
     binding.pry
     list.each {|em| @@emailList << em if !@@emailList.include?(em)}
-    @@emailList
+    @@emailList << stripped_list
   end
 
   def parse
