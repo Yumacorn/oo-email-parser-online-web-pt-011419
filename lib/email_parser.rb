@@ -14,6 +14,7 @@ class EmailParser
   def initialize(emails)
     list = emails.split(",")
     list.map {|string| string.strip}
+    puts list
     binding.pry
     list.each {|em| @@emailList << em if !@@emailList.include?(em)}
     @@emailList
